@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF9F00">
+<title>SPARC Framework | AI Specification Methodology | Software Equality</title>
+<meta name="description" content="The SPARC framework by Equality Software. 61% of AI projects fail from unclear specifications (Gartner 2024). SPARC produces 5 formal artefacts before any build begins. Structured AI delivery that works."s AI specification methodology for clear, unambiguous AI system requirements.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Software Equality">
+<meta name="msvalidate.01" content="6EEDBDDB8CA83CA5B8CFB3719F3EDAB4">
+<meta name="geo.region" content="GB-LND">
+<meta name="geo.placename" content="London, United Kingdom">
+<link rel="canonical" href="https://softwareequality.com/framework.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Software Equality">
+<meta property="og:title" content="SPARC Framework | AI Specification Methodology | Software Equality">
+<meta property="og:description" content="The SPARC framework by Equality Software. 61% of AI projects fail from unclear specifications (Gartner 2024). SPARC produces 5 formal artefacts before any build begins. Structured AI delivery that works."s AI specification methodology for clear, unambiguous AI system requirements.">
+<meta property="og:url" content="https://softwareequality.com/framework.html">
+<meta property="og:image" content="https://softwareequality.com/og-image.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SPARC Framework | AI Specification Methodology | Software Equality">
+<meta name="twitter:description" content="The SPARC framework by Equality Software. 61% of AI projects fail from unclear specifications (Gartner 2024). SPARC produces 5 formal artefacts before any build begins. Structured AI delivery that works."s AI specification methodology for clear, unambiguous AI system requirements.">
+<meta name="twitter:image" content="https://softwareequality.com/og-image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="enterprise-ds.css?v=3.6">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Software Equality",
+  "alternateName": "Equality Software Ltd",
+  "url": "https://softwareequality.com",
+  "logo": "https://softwareequality.com/og-image.png",
+  "foundingDate": "2023",
+  "contactPoint": {"@type": "ContactPoint","email": "ali.abdalla@softwareequality.com","contactType": "customer service"},
+  "address": {"@type": "PostalAddress","addressLocality": "London","addressCountry": "GB"},
+  "legalName": "Equality Software Ltd",
+  "taxID": "15006381"
+}</script>
+
+</head>
+<body>
+<!-- ANNOUNCEMENT BAR -->
+<div class="se-announcement" id="se-ann">
+  <strong>New:</strong> ADLC Certification Programme launching Q3 2026 &mdash; <a href='/contact'>Register Interest</a>
+  <button class="close-ann" aria-label="Close announcement">&#x2715;</button>
+</div>
+<nav class="se-nav" id="se-nav" aria-label="Main navigation">
+  <div class="se-nav-inner container">
+    <a aria-label='Software Equality Home' class='se-logo' href='/'>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 60" height="28" width="126" class="se-logo-img" aria-label="Software Equality" role="img" style="flex-shrink:0;display:block">
+  <text y="50" x="2" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#FF6B00">{</text>
+  <text y="50" x="30" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#D43CD8">}</text>
+  <text y="26" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#FF9F00" letter-spacing="0.5">Software</text>
+  <text y="50" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#00D4FF" letter-spacing="0.5">Equality.com</text>
+</svg>
+    </a>
+    <div class="se-nav-links">
+      <div class="se-nav-item" data-mega>
+        <a class='se-nav-link' href='/services'>Services <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="se-mega">
+          <div class="se-mega-col">
+            <div class="se-mega-col-title">Core Services</div>
+            <a class='se-mega-item' href='/ai-consultancy'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 2a2 2 0 012 2v3H10V4a2 2 0 012-2z"/><circle cx="8.5" cy="16.5" r="1.5"/><circle cx="15.5" cy="16.5" r="1.5"/><path d="M12 2v4M8 11V8M16 11V8"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Consultancy</span><span class="se-mega-item-desc">Strategy &amp; roadmap</span></div></a>
+            <a class='se-mega-item' href='/agentic-ai'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">Agentic AI</span><span class="se-mega-item-desc">Autonomous AI systems</span></div></a>
+            <a class='se-mega-item' href='/ai-governance'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Governance</span><span class="se-mega-item-desc">Risk &amp; compliance</span></div></a>
+          </div>
+          <div class="se-mega-col">
+            <div class="se-mega-col-title">Methodology</div>
+            <a class='se-mega-item' href='/adlc'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">ADLC Methodology</span><span class="se-mega-item-desc">AI development lifecycle</span></div></a>
+            <a class='se-mega-item' href='/sdlc'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">SDLC Integration</span><span class="se-mega-item-desc">AI into existing workflows</span></div></a>
+            <a class='se-mega-item' href='/framework'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20L12 4z"/><path d="M12 4v16M2 20l10-10"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">SPARC Framework</span><span class="se-mega-item-desc">Specification method</span></div></a>
+          </div>
+          <div class="se-mega-col">
+            <div class="se-mega-col-title">Training</div>
+            <a class='se-mega-item' href='/bootcamp'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Bootcamps</span><span class="se-mega-item-desc">Hands-on team training</span></div></a>
+            <a class='se-mega-item' href='/industries'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20V8l6-4v4l6-4v4l6-4v16H2z"/><rect x="6" y="14" width="3" height="6"/><rect x="11" y="14" width="3" height="6"/><rect x="16" y="14" width="3" height="6"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">Industries</span><span class="se-mega-item-desc">Sector expertise</span></div></a>
+          </div>
+        </div>
+      </div>
+      <a class='se-nav-link' href='/ai-projects'>Case Studies</a>
+      <a class='se-nav-link' href='/bootcamp'>Training</a>
+      <a class='se-nav-link' href='/about'>About</a>
+      <a class='se-nav-link' href='/resources'>Resources</a>
+      <a class='se-nav-link' href='/contact'>Contact</a>
+    </div>
+    <div class="se-nav-cta">
+      <a class='btn btn-primary btn-sm' href='/book'>Book a Call</a>
+      <button class="se-hamburger" id="se-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="se-mobile-overlay" id="se-overlay"></div>
+<aside class="se-mobile-nav" id="se-mobile-nav" aria-label="Mobile navigation">
+  <div class="se-mobile-nav-header">
+    <a class='se-logo' href='/'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 60" height="28" width="126" class="se-logo-img" aria-label="Software Equality" role="img" style="flex-shrink:0;display:block">
+  <text y="50" x="2" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#FF6B00">{</text>
+  <text y="50" x="30" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#D43CD8">}</text>
+  <text y="26" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#FF9F00" letter-spacing="0.5">Software</text>
+  <text y="50" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#00D4FF" letter-spacing="0.5">Equality.com</text>
+</svg></a>
+    <button class="se-mobile-close" id="se-mobile-close" aria-label="Close menu">&#x2715;</button>
+  </div>
+  <div class="se-mobile-links">
+    <a class='se-mobile-link' data-sub='mob-services' href='/services'>Services ▾</a>
+    <div class="se-mobile-sub" id="mob-services">
+      <a href='/ai-consultancy'>AI Consultancy</a>
+      <a href='/agentic-ai'>Agentic AI</a>
+      <a href='/ai-governance'>AI Governance</a>
+      <a href='/adlc'>ADLC Methodology</a>
+      <a href='/sdlc'>SDLC Integration</a>
+    </div>
+    <a class='se-mobile-link' href='/bootcamp'>Training</a>
+    <a class='se-mobile-link' href='/ai-projects'>Case Studies</a>
+    <a class='se-mobile-link' href='/industries'>Industries</a>
+    <a class='se-mobile-link' href='/about'>About</a>
+    <a class='se-mobile-link' href='/resources'>Resources</a>
+    <a class='se-mobile-link' href='/contact'>Contact</a>
+  </div>
+  <div class="se-mobile-footer">
+    <a class='btn btn-primary' href='/book'>Book Free Discovery Call</a>
+    <a class='btn btn-ghost' href='/contact'>Get in Touch</a>
+  </div>
+</aside>
+<section class="se-page-hero">
+  <div class="inner">
+    <div class="se-page-hero-inner">
+      <nav class="se-breadcrumb" aria-label="Breadcrumb"><a href='/'>Home</a><span class="se-breadcrumb-sep">/</span><a href='/adlc'>ADLC</a><span class="se-breadcrumb-sep">/</span><span>SPARC Framework</span></nav>
+      <div class="sec-label reveal">Specification Methodology</div>
+      <h1 class="reveal delay-1">The <span class="gradient-text">SPARC Framework</span></h1>
+      <p class="se-hero-sub reveal delay-2">SPARC is our structured approach to AI requirements specification. By defining Situation, Problem, Action, Result, and Constraints upfront, we eliminate the ambiguity that causes most AI projects to fail.</p>
+      <div class="se-hero-ctas reveal delay-3">
+        <a class='btn btn-primary btn-lg' href='/book'>Apply SPARC to Your Project</a>
+        <a class='btn btn-ghost btn-lg' href='/adlc'>See Full ADLC Methodology</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inner">
+    <div class="sec-header">
+      <div class="sec-label reveal">The Framework</div>
+      <h2 class="sec-title reveal delay-1">Five Components of <span class="gradient-text">Clear AI Specification</span></h2>
+      <p class="sec-sub reveal delay-2">Most AI projects fail because requirements are vague. SPARC forces precision at the start, so everyone - engineers, stakeholders, and governance teams - has the same understanding.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1.25rem">
+      <div class="se-card reveal delay-1" style="display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start">
+        <div style="width:60px;height:60px;background:var(--grad-brand);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:#000;font-family:var(--font-mono)">S</div>
+        <div><h3>Situation</h3><p>What is the current state? Describe the business context, the people involved, the systems that exist, and the conditions that make this problem relevant. A good Situation statement makes the stakes clear without prescribing a solution.</p></div>
+      </div>
+      <div class="se-card reveal delay-2" style="display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start">
+        <div style="width:60px;height:60px;background:var(--grad-brand);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:#000;font-family:var(--font-mono)">P</div>
+        <div><h3>Problem</h3><p>What specifically is not working? The Problem statement must be precise, measurable, and scoped. Avoid vague language like "inefficiency" - instead specify: "Manual invoice processing takes 4 hours per batch and produces 8% error rate."</p></div>
+      </div>
+      <div class="se-card reveal delay-3" style="display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start">
+        <div style="width:60px;height:60px;background:var(--grad-brand);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:#000;font-family:var(--font-mono)">A</div>
+        <div><h3>Action</h3><p>What should the AI system do? Describe the behaviour, not the implementation. "The system should extract line items, match against PO database, flag discrepancies above £500, and route for approval within 30 seconds."</p></div>
+      </div>
+      <div class="se-card reveal delay-4" style="display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start">
+        <div style="width:60px;height:60px;background:var(--grad-brand);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:#000;font-family:var(--font-mono)">R</div>
+        <div><h3>Result</h3><p>What does success look like? Define measurable outcomes: "Processing time reduced to under 2 minutes per batch. Error rate below 1%. 99.5% uptime. ROI positive within 6 months." These become the evaluation criteria for the AI system.</p></div>
+      </div>
+      <div class="se-card reveal delay-1" style="display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start">
+        <div style="width:60px;height:60px;background:var(--grad-brand);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:800;color:#000;font-family:var(--font-mono)">C</div>
+        <div><h3>Constraints</h3><p>What must the AI NOT do, or what limits apply? Data privacy rules, regulatory requirements, latency budgets, cost ceilings, explainability requirements, and integration limitations. Constraints prevent scope creep and governance failures.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-dark">
+  <div class="inner">
+    <div class="se-cta-section reveal">
+      <h2 class="sec-title" style="margin-bottom:1rem">Specify Your AI Project <span class="gradient-text">with SPARC</span></h2>
+      <p style="color:var(--text-muted);max-width:500px;margin:0 auto 2rem">We run SPARC specification workshops that produce a complete, signed-off requirements document in one day.</p>
+      <a class='btn btn-primary btn-lg' href='/book'>Book a SPARC Workshop &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- RS-BLOCK -->
+<link rel="stylesheet" href="research-stats.css?v=2.1">
+<section class="sec" style="padding-top:0">
+<div class="container">
+<div class="rs-section">
+  <span class="rs-title">SPARC Framework: Built on Enterprise AI Evidence</span>
+  <div class="rs-sub">The research base underpinning Software Equality's agentic AI framework</div>
+  <div class="rs-stats">
+    <div class="rs-stat"><div class="rs-stat-num count-up" data-count="63" data-suffix="%">63%</div><div class="rs-stat-label">Fortune 500 companies running multi-agent AI in production by 2025</div><div class="rs-stat-source">CrewAI Enterprise Report, 2025</div></div>
+    <div class="rs-stat"><div class="rs-stat-num cyan count-up" data-count="45" data-suffix="%">45%</div><div class="rs-stat-label">Productivity uplift in software engineering teams using agentic pipelines</div><div class="rs-stat-source">GitHub / Accenture, 2025</div></div>
+    <div class="rs-stat"><div class="rs-stat-num green count-up" data-count="33" data-suffix="%">33%</div><div class="rs-stat-label">Of enterprise apps will include agentic AI by 2028 (Gartner #1 trend)</div><div class="rs-stat-source">Gartner, Oct 2024</div></div>
+    <div class="rs-stat"><div class="rs-stat-num count-up" data-prefix="$" data-decimals="1" data-count="4.4" data-suffix="T">$4.4T</div><div class="rs-stat-label">Annual economic value from properly deployed agentic AI at enterprise scale</div><div class="rs-stat-source">McKinsey Global Institute, 2025</div></div>
+    <div class="rs-stat"><div class="rs-stat-num cyan count-up" data-count="80" data-suffix="%">80%</div><div class="rs-stat-label">Of agentic AI deployments introduce novel risk vectors not in traditional software</div><div class="rs-stat-source">McKinsey, Oct 2025</div></div>
+    <div class="rs-stat"><div class="rs-stat-num green count-up" data-count="5" data-suffix="x">5x</div><div class="rs-stat-label">Value uplift for organisations with formal agentic AI governance framework</div><div class="rs-stat-source">McKinsey, 2025</div></div>
+  </div>
+  <div class="rs-two">
+    <div>
+      <div class="rs-chart">
+        <div class="rs-chart-title">SPARC Framework: Capability Coverage by Pillar</div>
+        <div class="rs-bar-row"><div class="rs-bar-label">Strategy</div><div class="rs-bar-track"><div class="rs-bar-fill gold" data-w="100">Vision &amp; roadmap</div></div></div>
+        <div class="rs-bar-row"><div class="rs-bar-label">People</div><div class="rs-bar-track"><div class="rs-bar-fill cyan" data-w="100">Skills &amp; culture</div></div></div>
+        <div class="rs-bar-row"><div class="rs-bar-label">Architecture</div><div class="rs-bar-track"><div class="rs-bar-fill green" data-w="100">Data &amp; systems</div></div></div>
+        <div class="rs-bar-row"><div class="rs-bar-label">Risk</div><div class="rs-bar-track"><div class="rs-bar-fill purple" data-w="100">Governance &amp; compliance</div></div></div>
+        <div class="rs-bar-row"><div class="rs-bar-label">Capability</div><div class="rs-bar-track"><div class="rs-bar-fill gold" data-w="100">Build &amp; operate</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="rs-callout">
+        <div class="rs-callout-text">&ldquo;SPARC was designed because every other AI framework either ignores governance entirely or treats strategy as an afterthought. The agentic era demands both, simultaneously.&rdquo;</div>
+        <div class="rs-callout-attr">Software Equality Founder, Ali Abdalla</div>
+      </div>
+      <div class="rs-timeline">
+        <div class="rs-tl-item"><div class="rs-tl-date">Strategy</div><div class="rs-tl-text">Define AI vision, map highest-value use cases, set measurable KPIs &amp; governance boundaries</div></div>
+        <div class="rs-tl-item"><div class="rs-tl-date">People</div><div class="rs-tl-text">Assess team AI literacy, build upskilling roadmap, define human-in-the-loop protocols</div></div>
+        <div class="rs-tl-item"><div class="rs-tl-date">Architecture</div><div class="rs-tl-text">Data readiness, agent infrastructure design, integration patterns &amp; security model</div></div>
+        <div class="rs-tl-item"><div class="rs-tl-date">Risk</div><div class="rs-tl-text">EU AI Act compliance mapping, ISO 42001 alignment, bias &amp; safety testing</div></div>
+        <div class="rs-tl-item"><div class="rs-tl-date">Capability</div><div class="rs-tl-text">Build sprints, production deployment, monitoring &amp; continuous improvement loops</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="rs-source">Sources: Gartner Top 10 Strategic Technology Trends (Oct 2024) &bull; McKinsey Agentic AI &amp; Global Institute (2025) &bull; CrewAI Enterprise Report 2025 &bull; GitHub / Accenture Research 2025</div>
+</div></div>
+</section>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      e.target.querySelectorAll('.rs-bar-fill').forEach(function(b){
+        b.style.width=b.getAttribute('data-w')+'%';
+      });
+      io.unobserve(e.target);
+    });
+  },{threshold:0.2});
+  document.querySelectorAll('.rs-chart').forEach(function(c){io.observe(c);});
+})();
+</script><!-- /RS-BLOCK -->
+<!-- SE Newsletter Bar -->
+<section class="se-nl-section" aria-label="Newsletter signup">
+<div class="container">
+<div class="se-nl-inner">
+  <div class="se-nl-text">
+    <h2 class="se-nl-heading">Stay ahead of the AI curve</h2>
+    <p class="se-nl-sub">Monthly insights on agentic AI, ADLC methodology, and enterprise AI governance. No spam &mdash; unsubscribe any time.</p>
+  </div>
+  <form class="se-nl-form" id="se-nl-form" novalidate>
+    <div class="se-nl-row">
+      <input type="text" id="se-nl-name" class="se-nl-input" placeholder="Your name" autocomplete="given-name">
+      <input type="email" id="se-nl-email" class="se-nl-input" placeholder="Work email address *" required autocomplete="email">
+      <button type="submit" class="se-nl-btn" id="se-nl-btn">Subscribe &rarr;</button>
+    </div>
+    <p class="se-nl-msg" id="se-nl-msg"></p>
+  </form>
+</div>
+</div>
+</section>
+<style>
+.se-nl-section{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.08));border-top:1px solid rgba(99,102,241,.2);border-bottom:1px solid rgba(99,102,241,.2);padding:56px 0}
+.se-nl-inner{display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.se-nl-text{flex:1;min-width:260px}
+.se-nl-heading{font-size:1.6rem;font-weight:700;margin:0 0 10px;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.se-nl-sub{color:rgba(0,0,0,0.60);font-size:0.95rem;margin:0;line-height:1.6}
+.se-nl-form{flex:1;min-width:300px}
+.se-nl-row{display:flex;gap:10px;flex-wrap:wrap}
+.se-nl-input{flex:1;min-width:160px;background:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:10px;padding:12px 16px;color:#0D0D0D;font-size:14px;outline:none;transition:border-color .2s;font-family:inherit}
+.se-nl-input::placeholder{color:rgba(0,0,0,0.35)}
+.se-nl-input:focus{border-color:rgba(99,102,241,.6);background:#fff}
+.se-nl-btn{background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .15s;white-space:nowrap;font-family:inherit}
+.se-nl-btn:hover{opacity:.88;transform:translateY(-1px)}
+.se-nl-btn:disabled{opacity:.5;cursor:default;transform:none}
+.se-nl-msg{margin:10px 0 0;font-size:13px;min-height:18px}
+.se-nl-msg.ok{color:#4ade80}.se-nl-msg.err{color:#f87171}
+@media(max-width:680px){.se-nl-inner{flex-direction:column;gap:28px}.se-nl-row{flex-direction:column}}
+</style>
+<script>
+(function(){
+  var form=document.getElementById('se-nl-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(document.getElementById('se-nl-email').value||'').trim();
+    var name=(document.getElementById('se-nl-name').value||'').trim();
+    var msg=document.getElementById('se-nl-msg');
+    var btn=document.getElementById('se-nl-btn');
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.className='se-nl-msg err';msg.textContent='Please enter a valid email address.';return;
+    }
+    btn.disabled=true;btn.textContent='Subscribing...';
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({access_key:'ccffbee0-cd7d-4003-8b98-e35de4ae7f9a',subject:'Newsletter Signup'+(name?' from '+name:''),name:name||'Subscriber',email:email,message:'Newsletter signup from '+window.location.href,botcheck:''})
+    })
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        msg.className='se-nl-msg ok';msg.textContent='Subscribed! Thanks for joining.';
+        form.querySelectorAll('input').forEach(function(i){i.value='';});
+        btn.textContent='Subscribed ✓';
+      }else{
+        msg.className='se-nl-msg err';msg.textContent='Something went wrong. Please try again.';
+        btn.disabled=false;btn.textContent='Subscribe →';
+      }
+    })
+    .catch(function(){
+      msg.className='se-nl-msg err';msg.textContent='Connection error. Please try again.';
+      btn.disabled=false;btn.textContent='Subscribe →';
+    });
+  });
+})();
+</script>
+<!-- End SE Newsletter Bar -->
+
+
+<!-- SE Research Section: AI Specification: Why SPARC Methodology Matters -->
+<section class="se-research-section">
+  <div class="container">
+    <div class="se-rs-header">
+      <div class="se-rs-badge">Framework Evidence</div>
+      <h2 class="se-rs-title">AI Specification: Why SPARC Methodology Matters</h2>
+      <p class="se-rs-sub">The data is clear: organisations that invest in rigorous AI specification before building achieve dramatically better outcomes. Here is the evidence.</p>
+    </div>
+    
+  <div class="se-stat-grid">
+    <div class="se-stat-card">
+  <span class="se-stat-num">3×</span>
+  <div class="se-stat-lbl">more likely to achieve meaningful EBIT impact with workflow redesign</div>
+  <div class="se-stat-src">McKinsey State of AI, Nov 2025</div>
+</div>
+    <div class="se-stat-card">
+  <span class="se-stat-num">64%</span>
+  <div class="se-stat-lbl">of AI failures trace back to specification or requirements phase</div>
+  <div class="se-stat-src">McKinsey analysis 2025</div>
+</div>
+    <div class="se-stat-card">
+  <span class="se-stat-num">~50%</span>
+  <div class="se-stat-lbl">of AI high performers use formal AI product delivery frameworks</div>
+  <div class="se-stat-src">McKinsey State of AI, Nov 2025</div>
+</div>
+    <div class="se-stat-card">
+  <span class="se-stat-num">6 dims</span>
+  <div class="se-stat-lbl">McKinsey identifies 6 essential dimensions for AI value capture</div>
+  <div class="se-stat-src">McKinsey Rewired, 2025</div>
+</div>
+  </div>
+  <div class="se-chart-wrap">
+    <div class="se-chart-title">McKinsey's <span>6 Dimensions</span> of AI Value Capture — SPARC Alignment</div>
+    <table class="se-data-table">
+      <thead><tr><th>McKinsey Dimension</th><th>Description</th><th>SPARC Phase</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Strategy</strong></td><td>AI aligned to business objectives with clear ROI targets</td><td><span class="se-pill se-pill-gold">Specification</span></td></tr>
+        <tr><td><strong>Talent</strong></td><td>Right skills, roles and incentives for AI delivery</td><td><span class="se-pill se-pill-gold">Specification</span></td></tr>
+        <tr><td><strong>Operating Model</strong></td><td>Agile delivery org with cross-functional AI teams</td><td><span class="se-pill se-pill-cyan">Pseudocode</span></td></tr>
+        <tr><td><strong>Technology</strong></td><td>Modern AI stack, MLOps, infrastructure at scale</td><td><span class="se-pill se-pill-cyan">Architecture</span></td></tr>
+        <tr><td><strong>Data</strong></td><td>High-quality governed data pipelines and lineage</td><td><span class="se-pill se-pill-purple">Refinement</span></td></tr>
+        <tr><td><strong>Adoption & Scaling</strong></td><td>Change management, KPIs, continuous improvement</td><td><span class="se-pill se-pill-green">Completion</span></td></tr>
+      </tbody>
+    </table>
+    <div class="se-cite-bar"><strong>Sources:</strong> McKinsey 'Rewired' framework &bull; McKinsey State of AI November 2025</div>
+  </div>
+  <div class="se-two-col">
+    <div class="se-chart-wrap">
+      <div class="se-chart-title">Cost of <span>Poor AI Specification</span></div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Projects failing from wrong use case</span><span>41%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:41%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Scope creep from unclear requirements</span><span>35%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:35%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Rework from missing safety constraints</span><span>28%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:28%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Deployment failure from missing eval criteria</span><span>18%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:18%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Governance gaps post-launch</span><span>22%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:22%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-cite-bar"><strong>Sources:</strong> McKinsey AI project failure analysis 2025 — based on 200+ at-scale AI transformations</div>
+    </div>
+    <div class="se-chart-wrap">
+      <div class="se-chart-title">Benefits of <span>Structured AI Spec</span> (SPARC)</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Reduced rework & rebuild cycles</span><span>78%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:78%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Faster stakeholder alignment</span><span>72%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:72%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Clearer success metrics pre-build</span><span>81%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:81%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Better risk identification upfront</span><span>74%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:74%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-hbar">
+  <div class="se-hbar-label"><span>Higher compliance readiness</span><span>68%</span></div>
+  <div class="se-hbar-track"><div class="se-hbar-fill" style="width:68%;background:var(--grad-brand)"></div></div>
+</div>
+      <div class="se-cite-bar"><strong>Sources:</strong> Software Equality internal delivery data — 50+ enterprise AI projects</div>
+    </div>
+  </div>
+  
+<div class="se-chart-wrap" style="margin-bottom:24px">
+  <div class="se-chart-title">AI Framework Maturity vs. EBIT Gain — McKinsey 2025</div>
+  <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+    <defs>
+      <linearGradient id="hb4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF9F00"/><stop offset="100%" stop-color="#00D4FF"/></linearGradient>
+    </defs>
+    <text x="195" y="42" text-anchor="end" fill="rgba(0,0,0,0.60)" font-size="10" font-family="Inter,sans-serif">Nascent (ad-hoc, no framework)</text>
+    <rect x="200" y="30" width="18" height="18" rx="4" fill="url(#hb4)" opacity=".85"/>
+    <text x="223" y="43" fill="url(#hb4)" font-size="10" font-weight="700" font-family="Inter,sans-serif">4%</text>
+    <text x="195" y="74" text-anchor="end" fill="rgba(0,0,0,0.60)" font-size="10" font-family="Inter,sans-serif">Developing (pilots only)</text>
+    <rect x="200" y="62" width="55" height="18" rx="4" fill="url(#hb4)" opacity=".85"/>
+    <text x="260" y="75" fill="url(#hb4)" font-size="10" font-weight="700" font-family="Inter,sans-serif">12%</text>
+    <text x="195" y="106" text-anchor="end" fill="rgba(0,0,0,0.60)" font-size="10" font-family="Inter,sans-serif">Defined (documented processes)</text>
+    <rect x="200" y="94" width="110" height="18" rx="4" fill="url(#hb4)" opacity=".85"/>
+    <text x="315" y="107" fill="url(#hb4)" font-size="10" font-weight="700" font-family="Inter,sans-serif">24%</text>
+    <text x="195" y="138" text-anchor="end" fill="rgba(0,0,0,0.60)" font-size="10" font-family="Inter,sans-serif">Managed (measured &amp; governed)</text>
+    <rect x="200" y="126" width="156" height="18" rx="4" fill="url(#hb4)" opacity=".85"/>
+    <text x="361" y="139" fill="url(#hb4)" font-size="10" font-weight="700" font-family="Inter,sans-serif">34%</text>
+    <text x="195" y="170" text-anchor="end" fill="rgba(0,0,0,0.60)" font-size="10" font-family="Inter,sans-serif">Optimising (cross-functional AI)</text>
+    <rect x="200" y="158" width="179" height="18" rx="4" fill="url(#hb4)" opacity=".85"/>
+    <text x="384" y="171" fill="url(#hb4)" font-size="10" font-weight="700" font-family="Inter,sans-serif">39%</text>
+    <text x="360" y="235" text-anchor="middle" fill="rgba(0,0,0,0.25)" font-size="9" font-family="Inter,sans-serif">Source: McKinsey State of AI Nov 2025 — EBIT contribution % by maturity tier</text>
+  </svg>
+</div>
+</div>
+</section>
+<footer class="se-footer">
+  <div class="container">
+    <div class="se-footer-grid">
+      <div class="se-footer-col se-footer-brand">
+        <a class='se-logo' href='/'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 60" height="28" width="126" class="se-logo-img" aria-label="Software Equality" role="img" style="flex-shrink:0;display:block">
+  <text y="50" x="2" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#FF6B00">{</text>
+  <text y="50" x="30" font-family="'JetBrains Mono',monospace" font-weight="900" font-size="52" fill="#D43CD8">}</text>
+  <text y="26" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#FF9F00" letter-spacing="0.5">Software</text>
+  <text y="50" x="68" font-family="'Poppins','Inter',sans-serif" font-weight="700" font-size="19" fill="#00D4FF" letter-spacing="0.5">Equality.com</text>
+</svg></a>
+        <p class="se-footer-tagline">Engineering the future of AI for enterprise teams. ADLC-governed. SPARC-specified. London, UK.</p>
+        <div class="se-social-links">
+          <a href="https://www.linkedin.com/company/software-equality" class="se-social-link" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+          <a href="https://twitter.com/softwareequality" class="se-social-link" aria-label="X" target="_blank" rel="noopener">𝕏</a>
+          <a href="https://github.com/softwareequality" class="se-social-link" aria-label="GitHub" target="_blank" rel="noopener"><svg xmlns="https://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+        </div>
+      </div>
+      <div class="se-footer-col">
+        <div class="se-footer-title">Services</div>
+        <nav class="se-footer-links">
+          <a href='/ai-consultancy'>AI Consultancy</a>
+          <a href='/agentic-ai'>Agentic AI Development</a>
+          <a href='/adlc'>ADLC Methodology</a>
+          <a href='/sdlc'>SDLC Integration</a>
+          <a href='/ai-governance'>AI Governance</a>
+          <a href='/bootcamp'>AI Bootcamps</a>
+        </nav>
+      </div>
+      <div class="se-footer-col">
+        <div class="se-footer-title">Company</div>
+        <nav class="se-footer-links">
+          <a href='/about'>About Us</a>
+          <a href='/ai-projects'>Case Studies</a>
+          <a href='/industries'>Industries</a>
+          <a href='/resources'>Resources</a>
+          <a href='/faq'>FAQ</a>
+          <a href='/contact'>Contact</a>
+        </nav>
+      </div>
+      <div class="se-footer-col">
+        <div class="se-footer-title">Get Started</div>
+        <nav class="se-footer-links">
+          <a href='/book'>Book a Call</a>
+          <a href='/framework'>SPARC Framework</a>
+          <a href='/bootcamp'>Training Programmes</a>
+          <a href="mailto:ali.abdalla@softwareequality.com">ali.abdalla@softwareequality.com</a>
+        </nav>
+        <div style="margin-top:1.5rem;padding:1rem;background:rgba(255,159,0,0.06);border:1px solid rgba(255,159,0,0.15);border-radius:10px;">
+          <div style="font-size:0.75rem;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">REGISTERED IN ENGLAND</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">Equality Software Ltd<br>Co. No. 15006381<br>London, United Kingdom</div>
+        </div>
+      </div>
+    </div>
+    <div class="se-footer-bottom">
+      <span>&copy; 2024&ndash;2026 Equality Software Ltd. All rights reserved.</span>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+        <a href='/privacy'>Privacy Policy</a>
+        <a href='/terms'>Terms of Service</a>
+        <a href='/cookies'>Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="se-cookie-banner" id="se-cookie" role="region" aria-label="Cookie consent">
+  <div><strong style="display:block;margin-bottom:0.4rem;">Cookie Preferences</strong>
+  <p>We use cookies to improve your experience and analyse site usage. <a href='/cookies' style='color:var(--gold);'>Learn more</a></p></div>
+  <div class="se-cookie-actions">
+    <button class="btn btn-primary btn-sm" data-cookie-accept>Accept All</button>
+    <button class="btn btn-ghost btn-sm" data-cookie-decline>Reject Non-Essential</button>
+  </div>
+</div>
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</button>
+<script src="enterprise.js" defer></script>
+<script src="agentic-assistant.js" defer></script>
+
+
+<!-- SE Callback Widget -->
+<style>
+#se-cb-fab{position:fixed;bottom:100px;left:24px;z-index:9998;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+#se-cb-toggle{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#059669,#10b981);border:none;color:#fff;padding:10px 16px 10px 12px;border-radius:50px;cursor:pointer;font-size:13px;font-weight:600;box-shadow:0 4px 18px rgba(16,185,129,.45);transition:transform .2s,box-shadow .2s;font-family:inherit}
+#se-cb-toggle:hover{transform:scale(1.05) translateY(-1px);box-shadow:0 6px 24px rgba(16,185,129,.6)}
+#se-cb-toggle svg{flex-shrink:0}
+#se-cb-panel{background:#0d1117;border:1px solid rgba(16,185,129,.3);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.7);width:320px;max-width:calc(100vw - 48px);overflow:hidden;transition:opacity .25s,transform .25s;transform-origin:bottom left}
+#se-cb-panel.se-hidden{opacity:0;transform:scale(.93) translateY(10px);pointer-events:none}
+.se-cb-head{background:linear-gradient(135deg,#059669,#0d9488);padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.se-cb-head-info strong{display:block;color:#fff;font-size:14px;font-weight:600}
+.se-cb-head-info span{color:rgba(255,255,255,.75);font-size:12px}
+#se-cb-close{background:none;border:none;color:rgba(255,255,255,.8);font-size:20px;cursor:pointer;padding:4px;line-height:1;transition:color .15s}
+#se-cb-close:hover{color:#fff}
+.se-cb-body{padding:16px}
+.se-cb-input{width:100%;box-sizing:border-box;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:10px 14px;color:#e2e8f0;font-size:13px;outline:none;transition:border-color .2s;font-family:inherit;margin-bottom:10px}
+.se-cb-input::placeholder{color:rgba(255,255,255,.3)}
+.se-cb-input:focus{border-color:rgba(16,185,129,.55);background:rgba(255,255,255,.08)}
+.se-cb-submit{width:100%;background:linear-gradient(135deg,#059669,#0d9488);border:none;color:#fff;padding:12px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s;font-family:inherit}
+.se-cb-submit:hover{opacity:.88}
+.se-cb-submit:disabled{opacity:.5;cursor:default}
+.se-cb-success{text-align:center;padding:28px 16px}
+@media(max-width:540px){#se-cb-fab{bottom:88px;left:16px}#se-cb-panel{width:calc(100vw - 32px)}}
+</style>
+<div id="se-cb-fab">
+  <div id="se-cb-panel" class="se-hidden" role="dialog" aria-label="Request a callback">
+    <div class="se-cb-head">
+      <div class="se-cb-head-info">
+        <strong>Request a Call Back</strong>
+        <span>We call within 2 business hours</span>
+      </div>
+      <button id="se-cb-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="se-cb-body">
+      <div id="se-cb-fields">
+        <input type="text" id="se-cb-name" class="se-cb-input" placeholder="Your name *" required autocomplete="name">
+        <input type="email" id="se-cb-email" class="se-cb-input" placeholder="Email address *" required autocomplete="email">
+        <input type="tel" id="se-cb-phone" class="se-cb-input" placeholder="Phone number (optional)" autocomplete="tel">
+        <input type="text" id="se-cb-time" class="se-cb-input" placeholder="Best time to call (e.g. 2&ndash;4pm)">
+        <p id="se-cb-err" style="color:#f87171;font-size:12px;margin:-4px 0 8px;display:none"></p>
+        <button id="se-cb-submit" class="se-cb-submit">Request Call &rarr;</button>
+      </div>
+      <div id="se-cb-success" style="display:none" class="se-cb-success">
+        <div style="font-size:36px;margin-bottom:8px">&#x2705;</div>
+        <strong style="color:#4ade80;display:block;margin-bottom:6px">Request received!</strong>
+        <p style="color:rgba(0,0,0,0.65);font-size:13px;margin:0">We'll call you within 2 business hours.</p>
+      </div>
+    </div>
+  </div>
+  <button id="se-cb-toggle" aria-label="Request a callback">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5a2 2 0 011.68-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006.28 6.28l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Request a Call
+  </button>
+</div>
+<script>
+(function(){
+  var tog=document.getElementById('se-cb-toggle');
+  var panel=document.getElementById('se-cb-panel');
+  var close=document.getElementById('se-cb-close');
+  var sub=document.getElementById('se-cb-submit');
+  var err=document.getElementById('se-cb-err');
+  var isOpen=false;
+  function toggleCB(){isOpen=!isOpen;panel.classList.toggle('se-hidden',!isOpen);}
+  tog.addEventListener('click',toggleCB);
+  close.addEventListener('click',toggleCB);
+  sub.addEventListener('click',function(){
+    var name=(document.getElementById('se-cb-name').value||'').trim();
+    var email=(document.getElementById('se-cb-email').value||'').trim();
+    var phone=(document.getElementById('se-cb-phone').value||'').trim();
+    var time=(document.getElementById('se-cb-time').value||'').trim();
+    if(!name){err.style.display='block';err.textContent='Please enter your name.';return;}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.style.display='block';err.textContent='Please enter a valid email.';return;}
+    err.style.display='none';sub.disabled=true;sub.textContent='Sending...';
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({access_key:'ccffbee0-cd7d-4003-8b98-e35de4ae7f9a',subject:'Callback Request from '+name,name:name,email:email,message:'Phone: '+(phone||'n/a')+'\nBest time: '+(time||'n/a')+'\nPage: '+window.location.href,botcheck:''})
+    })
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        document.getElementById('se-cb-fields').style.display='none';
+        document.getElementById('se-cb-success').style.display='block';
+      }else{sub.disabled=false;sub.textContent='Request Call →';}
+    })
+    .catch(function(){sub.disabled=false;sub.textContent='Request Call →';});
+  });
+})();
+</script>
+<!-- End SE Callback Widget -->
+
+
+
+</body>
+</html>
