@@ -24,19 +24,37 @@ const PORT = Number(process.env.PORT || 8787);
 const PUBLIC_URL = (process.env.SE_PUBLIC_URL || "https://softwareequality.com").replace(/\/$/, "");
 
 const env = (name, fallback = "") => (process.env[`SE_${name}`] || process.env[name] || fallback).trim();
-// Keys pasted into .env sometimes carry quotes, a BOM or invisible Unicode
-// (zero-width spaces, smart quotes), which makes fetch reject the
-// Authorization header outright. Keep only printable ASCII and report it.
+// Keys pasted into .env sometimes carry quotes, terminal escape sequences
+// (bracketed paste "ESC[200~ ... ESC[201~"), spaces or invisible Unicode,
+// which makes fetch reject the Authorization header. Strip that, and if a
+// well-formed key is buried in the noise, use it (the last one, i.e. the most
+// recent paste). Health reports what was fixed, never the key itself.
+const KEY_PATTERNS = [
+  /sk-or-v1-[0-9a-f]{64}(?![0-9a-z])/g, // OpenRouter
+  /sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{32,}/g, // OpenAI
+  /(?:sk|rk)_(?:live|test)_[A-Za-z0-9]{20,}/g, // Stripe
+];
 function cleanKey(raw) {
-  const unquoted = raw.replace(/^["'\u201c\u2018]+|["'\u201d\u2019]+$/g, "");
-  const cleaned = unquoted.replace(/[^\x21-\x7E]/g, "");
-  const removed = [...raw].filter((ch, i) => !/[\x21-\x7E]/.test(ch) || ((i === 0 || i === raw.length - 1) && /["']/.test(ch)));
+  const noAnsi = raw.replace(/\x1b\[[0-9;?]*[~A-Za-z]/g, "").replace(/\[(?:200|201)~/g, "");
+  const printable = noAnsi.replace(/^["'\u201c\u2018]+|["'\u201d\u2019]+$/g, "").replace(/[^\x21-\x7E]/g, "");
+  let key = printable;
+  let matches = 0;
+  for (const re of KEY_PATTERNS) {
+    const found = noAnsi.match(re);
+    if (found && found.length) {
+      matches = found.length;
+      key = found[found.length - 1];
+      break;
+    }
+  }
   return {
-    key: cleaned,
+    key,
     info: {
-      length: cleaned.length,
-      prefix: cleaned.slice(0, 6),
-      fixedCharacters: removed.map((ch) => "U+" + ch.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")),
+      length: key.length,
+      prefix: key.slice(0, 6),
+      rawLength: raw.length,
+      cleaned: key !== raw,
+      keysFoundInValue: matches,
     },
   };
 }
