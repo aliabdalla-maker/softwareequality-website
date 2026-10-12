@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0B1530">
+<title>Good Hours Case Study: AI Marketplace Agents | Equality Software</title>
+<meta name="description" content="How Equality Software built goodhour.shop, an hourly marketplace whose AI pricing, negotiation and exchange agents work inside hard, logged limits.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Equality Software Ltd">
+<link rel="canonical" href="https://softwareequality.com/case-study-good-hours">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Equality Software">
+<meta property="og:title" content="Good Hours Case Study: AI Marketplace Agents | Equality Software"><meta property="og:description" content="How Equality Software built goodhour.shop, an hourly marketplace whose AI pricing, negotiation and exchange agents work inside hard, logged limits.">
+<meta property="og:url" content="https://softwareequality.com/case-study-good-hours"><meta property="og:image" content="https://softwareequality.com/og-image.png"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Good Hours Case Study: AI Marketplace Agents | Equality Software"><meta name="twitter:description" content="How Equality Software built goodhour.shop, an hourly marketplace whose AI pricing, negotiation and exchange agents work inside hard, logged limits."><meta name="twitter:image" content="https://softwareequality.com/og-image.png">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="enterprise-ds.css?v=5.0">
+<script type="application/ld+json" id="ld-org">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://softwareequality.com/#org", "name": "Equality Software", "legalName": "Equality Software Ltd", "alternateName": ["Software Equality"], "url": "https://softwareequality.com/", "logo": "https://softwareequality.com/logo-mark-192.png", "image": "https://softwareequality.com/og-image.png", "foundingDate": "2023", "taxID": "15006381", "email": "ali.abdalla@softwareequality.com", "address": {"@type": "PostalAddress", "streetAddress": "Winchester House, 259-269 Old Marylebone Road", "addressLocality": "London", "postalCode": "NW1 5RA", "addressCountry": "GB"}, "founder": {"@type": "Person", "name": "Ali Omer Abdalla", "jobTitle": "Founder and AI Software Engineering Director", "sameAs": ["https://www.linkedin.com/in/ali-omer-abdalla-76271810/"]}, "contactPoint": {"@type": "ContactPoint", "email": "ali.abdalla@softwareequality.com", "contactType": "sales", "areaServed": "GB", "availableLanguage": ["English", "Arabic"]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://softwareequality.com/"}, {"@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://softwareequality.com/case-studies"}, {"@type": "ListItem", "position": 3, "name": "Good Hours", "item": "https://softwareequality.com/case-study-good-hours"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Good Hours: an hourly marketplace with safe AI agents", "author": {"@type": "Person", "name": "Ali Omer Abdalla", "url": "https://www.linkedin.com/in/ali-omer-abdalla-76271810/"}, "publisher": {"@id": "https://softwareequality.com/#org"}, "datePublished": "2026-10-12", "dateModified": "2026-10-12", "image": "https://softwareequality.com/og-image.png", "mainEntityOfPage": "https://softwareequality.com/case-study-good-hours"}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="se-announcement" id="se-ann">
+  <strong>New:</strong> free 45-minute AI readiness call for UK teams. <a href='/book'>Book a slot</a>
+  <button class="close-ann" aria-label="Close announcement">&#x2715;</button>
+</div>
+<nav class="se-nav" id="se-nav"><div class="se-nav-inner container">
+  <a class='se-logo' href='/'><img src="/logo-mark-96.png" width="40" height="40" alt="" class="se-logo-mark"><span class="se-logo-text">Equality <span>Software</span></span></a>
+  <div class="se-nav-links">
+    <div class="se-nav-item" data-mega><a class='se-nav-link' href='/services'>Services <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="se-mega"><div class="se-mega-col"><div class="se-mega-col-title">Services</div>
+        <a class='se-mega-item' href='/ai-consultancy'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 2a2 2 0 012 2v3H10V4a2 2 0 012-2z"/><circle cx="8.5" cy="16.5" r="1.5"/><circle cx="15.5" cy="16.5" r="1.5"/><path d="M12 2v4M8 11V8M16 11V8"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Consultancy</span></div></a>
+        <a class='se-mega-item' href='/agentic-ai'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">Agentic AI</span></div></a>
+        <a class='se-mega-item' href='/ai-governance'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Governance</span></div></a>
+        <a class='se-mega-item' href='/adlc'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">ADLC Methodology</span></div></a>
+        <a class='se-mega-item' href='/sdlc'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">SDLC Integration</span></div></a>
+        <a class='se-mega-item' href='/framework'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20L12 4z"/><path d="M12 4v16M2 20l10-10"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">SPARC Framework</span></div></a>
+        <a class='se-mega-item' href='/bootcamp'><div class="se-mega-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="se-mega-item-text"><span class="se-mega-item-title">AI Bootcamps</span></div></a>
+      </div></div>
+    </div>
+    <a class='se-nav-link' href='/ai-projects'>Our Approach</a>
+    <a class='se-nav-link' href='/case-studies'>Case Studies</a>
+    <a class='se-nav-link' href='/bootcamp'>Training</a>
+    <a class='se-nav-link' href='/about'>About</a>
+    <a class='se-nav-link' href='/resources'>Resources</a>
+    <a class='se-nav-link' href='/contact'>Contact</a>
+  </div>
+  <div class="se-nav-cta"><a class='btn btn-primary btn-sm' href='/book'>Book a Call</a>
+    <button class="se-hamburger" id="se-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</div></nav>
+<div class="se-mobile-overlay" id="se-overlay"></div>
+<aside class="se-mobile-nav" id="se-mobile-nav">
+  <div class="se-mobile-nav-header"><a class='se-logo' href='/'><img src="/logo-mark-96.png" width="40" height="40" alt="" class="se-logo-mark"><span class="se-logo-text">Equality <span>Software</span></span></a><button class="se-mobile-close" id="se-mobile-close">&#x2715;</button></div>
+  <div class="se-mobile-links">
+    <a class='se-mobile-link' data-sub='mob-s3' href='/services'>Services &#9662;</a>
+    <div class="se-mobile-sub" id="mob-s3"><a href='/ai-consultancy'>AI Consultancy</a><a href='/agentic-ai'>Agentic AI</a><a href='/ai-governance'>AI Governance</a><a href='/adlc'>ADLC</a><a href='/sdlc'>SDLC</a><a href='/bootcamp'>Bootcamps</a></div>
+    <a class='se-mobile-link' href='/ai-projects'>Our Approach</a>
+    <a class='se-mobile-link' href='/about'>About</a>
+    <a class='se-mobile-link' href='/resources'>Resources</a>
+    <a class='se-mobile-link' href='/contact'>Contact</a>
+  </div>
+  <div class="se-mobile-footer"><a class='btn btn-primary' href='/book'>Book Free Discovery Call</a></div>
+</aside>
+<div id="main" tabindex="-1"></div>
+<section class="se-page-hero">
+  <div class="inner">
+    <div class="se-page-hero-inner">
+      <nav class="se-breadcrumb" aria-label="Breadcrumb"><a href='/'>Home</a><span class="se-breadcrumb-sep">/</span><a href='/case-studies'>Case Studies</a><span class="se-breadcrumb-sep">/</span><span>Good Hours</span></nav>
+      <div class="sec-label reveal">Case study &middot; Own product</div>
+      <h1 class="reveal delay-1">Good Hours: an hourly marketplace with <span class="gradient-text">safe AI agents</span></h1>
+      <p class="se-hero-sub reveal delay-2">How we built and launched goodhour.shop, where people book rooms, cars and travel services by the hour, with AI agents that price, negotiate and assist inside hard limits.</p>
+      <div class="se-hero-ctas reveal delay-3" style="margin-top:1.5rem"><a class='btn btn-primary btn-lg' href='https://www.goodhour.shop' target='_blank' rel='noopener'>Visit goodhour.shop &rarr;</a><a class='btn btn-outline-dark btn-lg' href='https://github.com/aliabdalla-maker/good-hour' target='_blank' rel='noopener'>View the code</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="inner">
+    <article class="se-prose" style="max-width:860px">
+<dl class="se-glance"><div><dt>Type</dt><dd>Consumer marketplace, live</dd></div><div><dt>Stack</dt><dd>Next.js 15, React 19, Fastify 5, BullMQ, Prisma, PostgreSQL, Redis, Stripe</dd></div><div><dt>Hosting</dt><dd>Oracle Cloud, Docker Compose, Caddy with automatic HTTPS</dd></div><div><dt>Status</dt><dd>Live at goodhour.shop, in active development</dd></div></dl><p class="se-note">This is one of Equality Software’s own products, built in-house with our ADLC method. It is not a client engagement.</p>
+      <h2>The problem</h2>
+      <p>Hotels, car hire and travel services are sold by the night or by the day, yet many people need them for a few hours: a room between flights, a van for an afternoon, a guide for a morning. Hosts also have idle hours they cannot sell. We wanted a marketplace for hourly bookings where AI helps both sides without ever being trusted blindly with money.</p>
+      <h2>What we built</h2>
+      <p>A modular monolith in one TypeScript codebase: a Next.js web app, a Fastify API split into modules with enforced boundaries, a BullMQ worker for background agent jobs, and a Prisma data layer on PostgreSQL. Travellers can pay instantly or post a request and run an AI reverse auction; hosts get verified listings, reviews, per-booking messaging and receipts.</p>
+<div class="se-arch"><div class="se-arch-row"><strong>Pricing agent</strong><span>Recommends an hourly rate from live demand and occupancy signals. The recommendation is always clamped to the host’s minimum and maximum on the server, whatever the model returns.</span></div><div class="se-arch-row"><strong>Negotiation agent</strong><span>Ranks supplier offers on a traveller’s request. Any offer ID the model invents is discarded, and the top pick is only recommended: a person accepts it unless the traveller opted in to auto-accept within a budget they set.</span></div><div class="se-arch-row"><strong>Exchange agent</strong><span>Quotes time-credit swaps between categories. The rate is anchored on real average prices, and the model can only adjust it by up to 25%. With no inventory it refuses to quote rather than guess.</span></div><div class="se-arch-row"><strong>Auctions and concierge</strong><span>An AI drafter turns one sentence into a complete auction, priced from comparable listings, and an on-page concierge helps people find what they need.</span></div></div>
+      <h2>How governance is built in</h2>
+      <ul>
+        <li><strong>Every agent call is logged.</strong> Each agent has exactly one function that calls the model, and it writes a decision log row on success and on fallback, so real and fallback decisions can be told apart.</li>
+        <li><strong>Hard limits on the server.</strong> Prices, budgets and exchange rates are bounded in code, never left to the model.</li>
+        <li><strong>Safe fallbacks.</strong> If the model times out or is unavailable, each agent falls back to a deterministic rule (static rate, lowest price or market rate) and the marketplace keeps working.</li>
+        <li><strong>Honest localisation.</strong> Forty locales are registered, each with a status that tests enforce, so the app never claims a translation it does not have.</li>
+      </ul>
+      <h2>Delivery</h2>
+      <p>Good Hours runs on an Oracle Cloud server with Docker Compose and Caddy for automatic HTTPS. Pushing to the main branch deploys automatically within minutes. The same server now also hosts this website.</p>
+      <h2>What it shows for clients</h2>
+      <p>AI can make real commercial decisions safely when the boundaries are in code: clamp what the model can change, verify what it returns, log every decision and keep a human in the loop where money moves. We apply the same approach in <a href="/agentic-ai">agentic AI development</a>.</p>
+    </article>
+  </div>
+</section>
+<section class="sec">
+  <div class="inner">
+    <div class="se-cta-section reveal">
+      <h2 class="sec-title" style="margin-bottom:1rem">Putting AI agents <span class="gradient-text">near money</span>?</h2>
+      <p style="color:var(--text-muted);max-width:560px;margin:0 auto 2rem">We can help you design agents with hard limits, verification and audit trails. Start with a free discovery call.</p>
+      <a class='btn btn-primary btn-lg' href='/book'>Book Free Discovery Call &rarr;</a>
+    </div>
+  </div>
+</section>
+<!-- SE Newsletter Bar -->
+<section class="se-nl-section" aria-label="Newsletter signup">
+<div class="container">
+<div class="se-nl-inner">
+  <div class="se-nl-text">
+    <h2 class="se-nl-heading">Stay ahead of the AI curve</h2>
+    <p class="se-nl-sub">Monthly insights on agentic AI, ADLC methodology, and enterprise AI governance. No spam, unsubscribe any time.</p>
+  </div>
+  <form class="se-nl-form" id="se-nl-form" novalidate>
+    <div class="se-nl-row">
+      <input type="text" id="se-nl-name" class="se-nl-input" placeholder="Your name" autocomplete="given-name">
+      <input type="email" id="se-nl-email" class="se-nl-input" placeholder="Work email address *" required autocomplete="email">
+      <button type="submit" class="se-nl-btn" id="se-nl-btn">Subscribe &rarr;</button>
+    </div>
+    <p class="se-nl-msg" id="se-nl-msg"></p>
+  </form>
+</div>
+</div>
+</section>
+<style>
+.se-nl-section{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(139,92,246,.08));border-top:1px solid rgba(99,102,241,.2);border-bottom:1px solid rgba(99,102,241,.2);padding:56px 0}
+.se-nl-inner{display:flex;gap:48px;align-items:center;flex-wrap:wrap}
+.se-nl-text{flex:1;min-width:260px}
+.se-nl-heading{font-size:1.6rem;font-weight:700;margin:0 0 10px;background:linear-gradient(135deg,#4f46e5,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.se-nl-sub{color:rgba(0,0,0,0.60);font-size:0.95rem;margin:0;line-height:1.6}
+.se-nl-form{flex:1;min-width:300px}
+.se-nl-row{display:flex;gap:10px;flex-wrap:wrap}
+.se-nl-input{flex:1;min-width:160px;background:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:10px;padding:12px 16px;color:#0D0D0D;font-size:14px;outline:none;transition:border-color .2s;font-family:inherit}
+.se-nl-input::placeholder{color:rgba(0,0,0,0.35)}
+.se-nl-input:focus{border-color:rgba(99,102,241,.6);background:#fff}
+.se-nl-btn{background:linear-gradient(135deg,#4f46e5,#7c3aed);border:none;color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity .2s,transform .15s;white-space:nowrap;font-family:inherit}
+.se-nl-btn:hover{opacity:.88;transform:translateY(-1px)}
+.se-nl-btn:disabled{opacity:.5;cursor:default;transform:none}
+.se-nl-msg{margin:10px 0 0;font-size:13px;min-height:18px}
+.se-nl-msg.ok{color:#4ade80}.se-nl-msg.err{color:#f87171}
+@media(max-width:680px){.se-nl-inner{flex-direction:column;gap:28px}.se-nl-row{flex-direction:column}}
+</style>
+<script>
+(function(){
+  var form=document.getElementById('se-nl-form');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(document.getElementById('se-nl-email').value||'').trim();
+    var name=(document.getElementById('se-nl-name').value||'').trim();
+    var msg=document.getElementById('se-nl-msg');
+    var btn=document.getElementById('se-nl-btn');
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.className='se-nl-msg err';msg.textContent='Please enter a valid email address.';return;
+    }
+    btn.disabled=true;btn.textContent='Subscribing...';
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({access_key:'ccffbee0-cd7d-4003-8b98-e35de4ae7f9a',subject:'Newsletter Signup'+(name?' from '+name:''),name:name||'Subscriber',email:email,message:'Newsletter signup from '+window.location.href,botcheck:''})
+    })
+    .then(function(r){return r.json();})
+    .then(function(d){
+      if(d.success){
+        msg.className='se-nl-msg ok';msg.textContent='Subscribed! Thanks for joining.';
+        form.querySelectorAll('input').forEach(function(i){i.value='';});
+        btn.textContent='Subscribed ✓';
+      }else{
+        msg.className='se-nl-msg err';msg.textContent='Something went wrong. Please try again.';
+        btn.disabled=false;btn.textContent='Subscribe →';
+      }
+    })
+    .catch(function(){
+      msg.className='se-nl-msg err';msg.textContent='Connection error. Please try again.';
+      btn.disabled=false;btn.textContent='Subscribe →';
+    });
+  });
+})();
+</script>
+<!-- End SE Newsletter Bar -->
+
+
+
+<footer class="se-footer"><div class="container">
+  <div class="se-footer-grid">
+    <div class="se-footer-col se-footer-brand"><a class='se-logo' href='/'><img src="/logo-mark-96.png" width="40" height="40" alt="" class="se-logo-mark"><span class="se-logo-text">Equality <span>Software</span></span></a>
+      <p class="se-footer-tagline">Engineering the future of AI. ADLC-governed. SPARC-specified. London, UK.</p>
+      <div class="se-social-links"><a href="https://www.linkedin.com/company/software-equality" class="se-social-link" target="_blank" rel="noopener">in</a></div>
+    </div>
+    <div class="se-footer-col"><div class="se-footer-title">Services</div><nav class="se-footer-links"><a href='/ai-consultancy'>AI Consultancy</a><a href='/agentic-ai'>Agentic AI</a><a href='/adlc'>ADLC</a><a href='/sdlc'>SDLC</a><a href='/ai-governance'>Governance</a><a href='/bootcamp'>Bootcamps</a></nav></div>
+    <div class="se-footer-col"><div class="se-footer-title">Company</div><nav class="se-footer-links"><a href='/about'>About</a><a href='/case-studies'>Case Studies</a><a href='/ai-projects'>Our Approach</a><a href='/industries'>Industries</a><a href='/resources'>Resources</a><a href='/faq'>FAQ</a><a href='/contact'>Contact</a></nav></div>
+    <div class="se-footer-col"><div class="se-footer-title">Contact</div><nav class="se-footer-links"><a href='/book'>Book a Call</a><a href="mailto:ali.abdalla@softwareequality.com">ali.abdalla@softwareequality.com</a></nav>
+      <div style="margin-top:1rem;padding:0.85rem;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:10px;font-size:0.8rem;color:var(--text-dim);">Equality Software Ltd &bull; Co. No. 15006381 &bull; London, UK</div>
+    </div>
+  </div>
+  <div class="se-footer-bottom"><span>&copy; 2024&ndash;2026 Equality Software Ltd.</span><div style="display:flex;gap:1.5rem;"><a href="/privacy">Privacy</a><a href="/business-ai-manager-privacy">App Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a><a href="/sources">Sources</a></div></div>
+</div></footer>
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</button>
+<script src="enterprise.js" defer></script>
+<script>(function(){function l(){var s=document.createElement("script");s.src="/agentic-assistant.js";document.body.appendChild(s)}if("requestIdleCallback"in window){addEventListener("load",function(){requestIdleCallback(l,{timeout:2500})})}else{addEventListener("load",function(){setTimeout(l,1200)})}})();</script>
+
+
+
+
+
+</body>
+</html>

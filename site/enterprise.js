@@ -551,7 +551,7 @@
         vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
         r: Math.random() * 1.8 + 0.5,
         a: Math.random(),
-        c: ['#FF9F00','#00D4FF','#7B2FBE','#FFBF40'][Math.floor(Math.random()*4)]
+        c: ['#0B1530','#00D4FF','#7C3AED','#FFBF40'][Math.floor(Math.random()*4)]
       });
     }
 
@@ -617,7 +617,7 @@
   }
 
   function fireSparkles(el) {
-    const colors = ['#FF9F00','#FFBF40','#00D4FF','#ffffff'];
+    const colors = ['#0B1530','#FFBF40','#00D4FF','#ffffff'];
     for (let i = 0; i < 8; i++) {
       const s = document.createElement('span');
       s.className = 'se-sparkle';
@@ -745,7 +745,7 @@
     const glow = document.createElement('div');
     glow.style.cssText = `
       position:fixed; width:300px; height:300px; border-radius:50%;
-      background:radial-gradient(circle, rgba(255,159,0,0.04) 0%, transparent 70%);
+      background:radial-gradient(circle, rgba(37,99,235,0.04) 0%, transparent 70%);
       pointer-events:none; z-index:1; transform:translate(-50%,-50%);
       transition:opacity 0.3s; opacity:0;
     `;
