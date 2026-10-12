@@ -24,10 +24,26 @@ const PORT = Number(process.env.PORT || 8787);
 const PUBLIC_URL = (process.env.SE_PUBLIC_URL || "https://softwareequality.com").replace(/\/$/, "");
 
 const env = (name, fallback = "") => (process.env[`SE_${name}`] || process.env[name] || fallback).trim();
-const AI_KEY = env("OPENAI_API_KEY");
+// Keys pasted into .env sometimes carry quotes, a BOM or invisible Unicode
+// (zero-width spaces, smart quotes), which makes fetch reject the
+// Authorization header outright. Keep only printable ASCII and report it.
+function cleanKey(raw) {
+  const unquoted = raw.replace(/^["'\u201c\u2018]+|["'\u201d\u2019]+$/g, "");
+  const cleaned = unquoted.replace(/[^\x21-\x7E]/g, "");
+  const removed = [...raw].filter((ch, i) => !/[\x21-\x7E]/.test(ch) || ((i === 0 || i === raw.length - 1) && /["']/.test(ch)));
+  return {
+    key: cleaned,
+    info: {
+      length: cleaned.length,
+      prefix: cleaned.slice(0, 6),
+      fixedCharacters: removed.map((ch) => "U+" + ch.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")),
+    },
+  };
+}
+const { key: AI_KEY, info: AI_KEY_INFO } = cleanKey(env("OPENAI_API_KEY"));
 const AI_BASE = env("OPENAI_BASE_URL", "https://api.openai.com/v1").replace(/\/$/, "");
 const AI_MODEL = env("OPENAI_MODEL", "gpt-4o-mini");
-const STRIPE_KEY = env("STRIPE_SECRET_KEY");
+const { key: STRIPE_KEY } = cleanKey(env("STRIPE_SECRET_KEY"));
 
 // ---------------------------------------------------------------------------
 // Site knowledge: index the published pages
@@ -317,7 +333,7 @@ const server = http.createServer(async (req, res) => {
         pages: new Set(chunks.map((c) => c.url)).size,
         passages: chunks.length,
         indexedAt,
-        ai: { configured: Boolean(AI_KEY), model: AI_MODEL, provider: new URL(AI_BASE).host, lastError: lastAiError, lastSuccessAt: lastAiSuccessAt },
+        ai: { configured: Boolean(AI_KEY), model: AI_MODEL, provider: new URL(AI_BASE).host, key: AI_KEY ? AI_KEY_INFO : null, lastError: lastAiError, lastSuccessAt: lastAiSuccessAt },
         checkout: { configured: Boolean(STRIPE_KEY), courses: Object.keys(COURSES) },
       });
     }
