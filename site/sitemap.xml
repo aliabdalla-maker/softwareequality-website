@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <url><loc>https://softwareequality.com/</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://softwareequality.com/services.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://softwareequality.com/adlc.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://softwareequality.com/agentic-ai.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://softwareequality.com/ai-consultancy.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://softwareequality.com/ai-governance.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://softwareequality.com/sdlc.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://softwareequality.com/framework.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://softwareequality.com/bootcamp.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://softwareequality.com/ai-projects.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://softwareequality.com/industries.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://softwareequality.com/about.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://softwareequality.com/contact.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://softwareequality.com/book.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://softwareequality.com/resources.html</loc><lastmod>2026-06-30</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://softwareequality.com/faq.html</loc><lastmod>2026-06-30</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://softwareequality.com/about</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/adlc</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/agentic-ai</loc><lastmod>2026-10-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://softwareequality.com/ai-consultancy</loc><lastmod>2026-10-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://softwareequality.com/ai-governance</loc><lastmod>2026-10-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://softwareequality.com/ai-projects</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/book</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://softwareequality.com/bootcamp</loc><lastmod>2026-10-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://softwareequality.com/business-ai-manager-delete-account</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
+  <url><loc>https://softwareequality.com/business-ai-manager-privacy</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
+  <url><loc>https://softwareequality.com/business-ai-manager</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/contact</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://softwareequality.com/cookies</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
+  <url><loc>https://softwareequality.com/faq</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/framework</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/guide-ai-governance-checklist</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://softwareequality.com/guide-eu-ai-act-uk-smes</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://softwareequality.com/how-we-work</loc><lastmod>2026-10-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://softwareequality.com/</loc><lastmod>2026-10-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://softwareequality.com/industries</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/privacy</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
+  <url><loc>https://softwareequality.com/resources</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/sdlc</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://softwareequality.com/services</loc><lastmod>2026-10-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://softwareequality.com/sources</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
+  <url><loc>https://softwareequality.com/terms</loc><lastmod>2026-10-12</lastmod><priority>0.3</priority></url>
 </urlset>

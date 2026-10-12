@@ -149,12 +149,13 @@ function guessAgent(text) {
 let lastAiError = null;
 let lastAiSuccessAt = null;
 
-const SYSTEM = `You are the website assistant for Equality Software Ltd (Software Equality), a London AI consultancy: agentic AI engineering, the ADLC and SPARC methods, AI governance (ISO 42001, EU AI Act), AI project rescue, SDLC modernisation and AI bootcamps.
+const SYSTEM = `You are the website assistant for Equality Software Ltd (brand: Equality Software; domain softwareequality.com), a London AI consultancy: agentic AI engineering, the ADLC and SPARC methods, AI governance (ISO 42001, EU AI Act), AI project rescue, SDLC modernisation and AI bootcamps.
 You work as one of four agents and pick the best one for each reply:
 - knowledge: services, methods, company
 - pricing: fees, plans, ROI (only quote prices that appear in the provided site extracts)
 - scheduler: booking discovery calls (send people to <a href="/book">book a discovery call</a> or <a href="/contact">contact the team</a>)
 - research: data, standards, regulations, citations from the site
+Booking: discovery calls are free and 45 minutes; link <a href="/book">book a discovery call</a>. Bootcamps: link <a href="/bootcamp">bootcamps</a> where visitors can pay online. Never claim client numbers, ratings or results; the engagement examples on the site are illustrative.
 Rules: answer only from the site extracts and general knowledge about AI practice; never invent prices, clients, dates or guarantees; if unsure, say so and offer the contact page. Be concise (under 140 words). Use British English and plain punctuation (no em dashes).
 Reply with JSON only: {"agent": "knowledge|pricing|scheduler|research", "reply": "<p>...</p>"} where reply is simple HTML using only p, ul, ol, li, strong, em, a (relative links to site pages).`;
 
@@ -168,7 +169,7 @@ async function askModel(messages, context, page) {
   const headers = { "content-type": "application/json", authorization: `Bearer ${AI_KEY}` };
   if (AI_BASE.includes("openrouter.ai")) {
     headers["HTTP-Referer"] = PUBLIC_URL;
-    headers["X-Title"] = "Software Equality website";
+    headers["X-Title"] = "Equality Software website";
   }
   const res = await fetch(`${AI_BASE}/chat/completions`, {
     method: "POST",

@@ -4,7 +4,9 @@
    ============================================================ */
 
 /* 1. GOOGLE FONTS IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/inter-latin-wght-normal.woff2') format('woff2-variations'),url('/fonts/inter-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/jetbrains-mono-latin-600-normal.woff2') format('woff2')}
 
 /* 2. CSS CUSTOM PROPERTIES */
 :root {
@@ -41,7 +43,7 @@
 
   /* Typography */
   --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
-  --font-heading: 'Poppins', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
 
   /* Sizing */
@@ -3334,3 +3336,101 @@ section, .sec, .se-hero, .se-footer, .se-nav {
 
 /* Raise share bar above any remaining overlaps */
 #se-share-bar { z-index: 9500; }
+
+
+/* ===================== v4.0 upgrade (Oct 2026) ===================== */
+.skip-link{position:absolute;left:1rem;top:-100px;z-index:10000;background:#14002a;color:#fff;padding:.75rem 1.25rem;border-radius:8px;font-weight:600;text-decoration:none}
+.skip-link:focus{top:1rem;outline:3px solid var(--gold-light)}
+#main:focus{outline:none}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+
+/* Logo */
+.se-logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none}
+.se-logo-mark{width:40px;height:40px;display:block;flex-shrink:0}
+.se-logo .se-logo-text{display:inline-block;font-family:var(--font-heading);font-weight:800;font-size:1.05rem;line-height:1.1;color:#2b0a4a;letter-spacing:-.01em}
+.se-logo .se-logo-text span{color:var(--purple)}
+.se-footer .se-logo .se-logo-text{color:inherit}
+
+/* SVG icons that replaced emoji */
+.ico{width:1.15em;height:1.15em;vertical-align:-.18em;display:inline-block}
+.se-card-icon .ico,.se-blog-card-img .ico,.err-card-icon .ico{width:28px;height:28px;vertical-align:middle}
+.se-card-icon,.err-card-icon{color:var(--purple)}
+.se-blog-card-img .ico{width:44px;height:44px;color:var(--purple)}
+.se-mega-icon .ico{width:20px;height:20px}
+.se-feature-item-icon .ico{width:18px;height:18px}
+.se-visual-panel .ico{width:56px;height:56px;color:var(--purple)}
+
+/* Hero: two columns with ADLC visual */
+.se-hero-split{flex-direction:row;align-items:center;justify-content:space-between;gap:3rem}
+.se-hero-copy{display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem;flex:1 1 560px;min-width:0}
+.se-hero-visual{flex:0 1 460px;margin:0}
+.se-adlc-wheel{width:100%;height:auto;display:block;font-family:var(--font-sans)}
+.se-adlc-wheel text{font-family:var(--font-sans)}
+.se-hero-proof{list-style:none;padding:0;margin:.25rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:.9rem}
+.se-hero-proof li{position:relative;padding-left:1.4rem;color:rgba(255,255,255,.9)!important}
+.se-hero-proof li::before{content:'';position:absolute;left:0;top:.35em;width:.8rem;height:.45rem;border-left:2px solid #22C55E;border-bottom:2px solid #22C55E;transform:rotate(-45deg)}
+@media(max-width:960px){.se-hero-split{flex-direction:column;align-items:flex-start}.se-hero-visual{width:100%;max-width:420px;align-self:center}}
+
+/* Fact cards (verifiable facts instead of unproven counters) */
+.se-fact-num{font-size:clamp(1.4rem,2.6vw,2.1rem)!important;word-break:break-word}
+
+/* Sourced evidence cards */
+.se-evidence-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.se-evidence{display:flex;flex-direction:column;gap:.4rem;padding:1.4rem;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);text-decoration:none;color:var(--text);transition:border-color var(--t-base),transform var(--t-base)}
+.se-evidence:hover{border-color:var(--border-gold);transform:translateY(-2px)}
+.se-evidence-num{font-size:2rem;font-weight:800;color:var(--purple);line-height:1.1}
+.se-evidence-label{font-size:.95rem;line-height:1.5}
+.se-evidence-src{font-size:.78rem;color:var(--text-muted);margin-top:auto;text-decoration:underline;text-underline-offset:2px}
+.se-evidence-note{text-align:center;margin-top:1.5rem;font-weight:600}
+.se-evidence-note a{color:var(--purple)}
+
+/* Leadership */
+.se-person{display:flex;gap:1.5rem;align-items:flex-start;max-width:760px;margin:0 auto;padding:1.75rem;border-radius:var(--radius-lg);background:var(--surface);border:1px solid var(--border)}
+.se-person-avatar{flex:0 0 88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#fff;background:var(--grad-purple)}
+.se-person h3{margin:0 0 .25rem}
+.se-person-role{color:var(--text-muted);font-weight:600;margin:0 0 .75rem}
+.se-person-link{font-weight:600;color:var(--purple)}
+@media(max-width:560px){.se-person{flex-direction:column}}
+
+/* Engagement examples */
+.se-case-list{display:flex;flex-direction:column;gap:1.5rem}
+.se-case-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.se-case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
+.se-case-grid h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--purple);margin:0 0 .4rem}
+.se-case-metrics{margin:0;padding-left:1.1rem}
+.se-case-metrics li{margin-bottom:.35rem}
+@media(max-width:860px){.se-case-grid{grid-template-columns:1fr}}
+
+/* Timeline */
+.se-timeline{list-style:none;margin:0 auto;padding:0;max-width:760px;border-left:3px solid var(--border-gold)}
+.se-timeline li{position:relative;padding:0 0 1.4rem 1.5rem}
+.se-timeline li::before{content:'';position:absolute;left:-9px;top:.3rem;width:15px;height:15px;border-radius:50%;background:var(--gold);border:3px solid var(--bg)}
+.se-timeline strong{display:block;font-size:1rem}
+.se-timeline span{color:var(--text-muted)}
+
+/* Long-form guide pages */
+.se-prose{max-width:760px;margin:0 auto;font-size:1.05rem;line-height:1.8}
+.se-prose h2{margin:2.5rem 0 .75rem;font-size:1.6rem}
+.se-prose h3{margin:1.75rem 0 .5rem;font-size:1.2rem}
+.se-prose ul,.se-prose ol{padding-left:1.3rem;margin:0 0 1.25rem}
+.se-prose li{margin-bottom:.4rem}
+.se-prose table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.95rem}
+.se-prose th,.se-prose td{border:1px solid var(--border-strong);padding:.6rem .75rem;text-align:left;vertical-align:top}
+.se-prose th{background:var(--surface)}
+.se-prose a{color:var(--purple);text-decoration:underline}
+.se-prose .se-note{padding:1rem 1.25rem;border-left:4px solid var(--gold);background:var(--surface);border-radius:0 8px 8px 0;margin:1.5rem 0}
+.se-prose-meta{color:var(--text-muted);font-size:.9rem;margin-bottom:2rem}
+.se-checklist{list-style:none;padding:0!important}
+.se-checklist li{padding-left:2rem;position:relative}
+.se-checklist li::before{content:'';position:absolute;left:0;top:.3rem;width:1.1rem;height:1.1rem;border:2px solid var(--purple);border-radius:4px}
+.se-sources li{margin-bottom:1rem}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
+/* Hero layout fix: background layers must not take up flex space */
+.se-hero > .se-hero-bg,.se-hero > .se-mesh{position:absolute;inset:0}
+.se-hero > .se-blob{position:absolute;pointer-events:none}
+.se-hero > .se-hero-content{flex:1 1 auto;min-height:0}
+.se-case-h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--purple);margin:1rem 0 .4rem}
