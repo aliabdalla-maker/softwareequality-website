@@ -1,0 +1,24 @@
+# Checks the live site on the Oracle server directly (by IP), bypassing any
+# DNS caches. Run it from the Actions tab after a change.
+name: Check live site
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request key pages from the server
+        run: |
+          set -u
+          ip=143.47.255.104
+          dig +short softwareequality.com A
+          dig +short www.softwareequality.com A
+          for p in / /privacy /business-ai-manager-privacy /business-ai-manager-delete-account /contact /does-not-exist; do
+            code=$(curl -s -o /dev/null -w '%{http_code} %{ssl_verify_result}' --resolve softwareequality.com:443:$ip https://softwareequality.com$p || echo fail)
+            echo "$p -> $code"
+          done
+          curl -sI --resolve softwareequality.com:443:$ip https://softwareequality.com/ | head -20
+          curl -sI --resolve www.softwareequality.com:443:$ip https://www.softwareequality.com/privacy | head -5
+          curl -s --resolve softwareequality.com:443:$ip -X POST -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"hello"}]}' https://softwareequality.com/api/chat | head -c 200; echo
