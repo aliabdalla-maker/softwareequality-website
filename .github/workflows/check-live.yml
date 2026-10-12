@@ -22,3 +22,11 @@ jobs:
           curl -sI --resolve softwareequality.com:443:$ip https://softwareequality.com/ | head -20
           curl -sI --resolve www.softwareequality.com:443:$ip https://www.softwareequality.com/privacy | head -5
           curl -s --resolve softwareequality.com:443:$ip -X POST -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"hello"}]}' https://softwareequality.com/api/chat | head -c 200; echo
+
+      - name: Check the Netlify functions directly
+        run: |
+          nf=rococo-beignet-d94339.netlify.app
+          body='{"messages":[{"role":"user","content":"hello"}]}'
+          echo "direct:"; curl -s -X POST -H 'content-type: application/json' -d "$body" https://$nf/api/chat | head -c 150; echo
+          nfip=$(dig +short $nf | tail -1)
+          echo "SNI softwareequality.com + Host netlify:"; curl -s --resolve softwareequality.com:443:$nfip -H "Host: $nf" -X POST -H 'content-type: application/json' -d "$body" https://softwareequality.com/api/chat | head -c 150; echo
