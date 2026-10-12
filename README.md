@@ -9,14 +9,22 @@ Let's Encrypt.
 - `overrides/` holds pages that were added or changed during the move from
   Netlify: the updated `privacy.html` and the Business AI Manager app's
   privacy policy and account-deletion pages.
-- `.github/workflows/mirror.yml` copied the live Netlify site into `site/`.
-  Run it once from the Actions tab before switching DNS.
+- `api/server.mjs` is the small back end that replaced the Netlify Functions:
+  the website AI assistant (`POST /api/chat`, answers from the pages in
+  `site/`, with a link-based fallback if the AI provider is down) and the
+  bootcamp Stripe checkout (`/.netlify/functions/stripe-checkout?course=`,
+  also `/api/checkout`). No dependencies; runs as the `se-api` service on the
+  server using the OpenRouter/OpenAI and Stripe keys in the server's `.env`.
+  Status: https://softwareequality.com/api/health
+- `.github/workflows/mirror.yml` copied the live Netlify site into `site/`
+  (one-off, already done). `check-live.yml` tests the live server directly.
 
 ## How changes go live
 
 Push to `main`. The server pulls this repo every 2 minutes (the `sitesync`
 service in good-hour's `docker-compose.prod.yml`) and Caddy serves the new
-files straight away. No build step.
+files straight away; `se-api` restarts itself when `api/` changes. No build
+step. Nothing is hosted on Netlify any more.
 
 ## DNS (one-time switch from Netlify)
 
