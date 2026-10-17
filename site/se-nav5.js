@@ -118,7 +118,7 @@
   if (window.__seInteractionFixesRequested) return;
   window.__seInteractionFixesRequested = true;
   var s = document.createElement('script');
-  s.src = '/interaction-fixes.js?v=1';
+  s.src = '/interaction-fixes.js?v=2';
   s.defer = true;
   s.async = false;
   document.head.appendChild(s);
