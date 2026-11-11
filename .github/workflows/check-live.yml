@@ -1,32 +1,59 @@
-# Checks the live site on the Oracle server directly (by IP), bypassing any
-# DNS caches. Run it from the Actions tab after a change.
-name: Check live site
+name: Production smoke test
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: softwareequality-production-smoke
+  cancel-in-progress: true
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - name: Request key pages from the server
+      - name: Check DNS and HTTPS endpoints
+        shell: bash
         run: |
-          set -u
-          ip=143.47.255.104
-          dig +short softwareequality.com A
-          dig +short www.softwareequality.com A
-          for p in / /privacy /business-ai-manager-privacy /business-ai-manager-delete-account /contact /does-not-exist; do
-            code=$(curl -s -o /dev/null -w '%{http_code} %{ssl_verify_result}' --resolve softwareequality.com:443:$ip https://softwareequality.com$p || echo fail)
-            echo "$p -> $code"
-          done
-          curl -sI --resolve softwareequality.com:443:$ip https://softwareequality.com/ | head -20
-          curl -sI --resolve www.softwareequality.com:443:$ip https://www.softwareequality.com/privacy | head -5
-          curl -s --resolve softwareequality.com:443:$ip -X POST -H 'content-type: application/json' -d '{"messages":[{"role":"user","content":"hello"}]}' https://softwareequality.com/api/chat | head -c 200; echo
+          set -euo pipefail
+          expected_ip=143.47.255.104
 
-      - name: Check the Netlify functions directly
+          apex_ip=$(dig +short softwareequality.com A | tail -1)
+          www_ip=$(dig +short www.softwareequality.com A | tail -1)
+          echo "softwareequality.com -> $apex_ip"
+          echo "www.softwareequality.com -> $www_ip"
+          test "$apex_ip" = "$expected_ip"
+          test "$www_ip" = "$expected_ip"
+
+          for url in \
+            https://softwareequality.com/ \
+            https://softwareequality.com/privacy \
+            https://softwareequality.com/case-study-aepx \
+            https://softwareequality.com/aep-x/ \
+            https://softwareequality.com/api/health; do
+            echo "checking $url"
+            curl --fail --silent --show-error --location --max-time 15 "$url" >/tmp/body
+            if [[ "$url" == */aep-x/ ]]; then
+              grep -q 'AEP-X' /tmp/body
+            fi
+          done
+
+      - name: Check redirects and security headers
+        shell: bash
         run: |
-          nf=rococo-beignet-d94339.netlify.app
-          body='{"messages":[{"role":"user","content":"hello"}]}'
-          echo "direct:"; curl -s -X POST -H 'content-type: application/json' -d "$body" https://$nf/api/chat | head -c 150; echo
-          nfip=$(dig +short $nf | tail -1)
-          echo "SNI softwareequality.com + Host netlify:"; curl -s --resolve softwareequality.com:443:$nfip -H "Host: $nf" -X POST -H 'content-type: application/json' -d "$body" https://softwareequality.com/api/chat | head -c 150; echo
+          set -euo pipefail
+          curl -fsSI https://www.softwareequality.com/aep-x/ | grep -qi '^location: https://softwareequality.com/aep-x/'
+
+          headers=$(curl -fsSI https://softwareequality.com/)
+          printf '%s\n' "$headers"
+          grep -qi '^strict-transport-security:' <<<"$headers"
+          grep -qi '^x-content-type-options: nosniff' <<<"$headers"
+          grep -qi '^referrer-policy: strict-origin-when-cross-origin' <<<"$headers"
+
+          code=$(curl -sS -o /dev/null -w '%{http_code}' https://softwareequality.com/does-not-exist)
+          test "$code" = "404"
