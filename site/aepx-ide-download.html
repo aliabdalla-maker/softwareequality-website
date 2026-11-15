@@ -90,7 +90,7 @@
   function probe(url,ok,bad){var i=new Image();var t=setTimeout(function(){i.onload=i.onerror=null;bad();},8000);i.onload=function(){clearTimeout(t);ok();};i.onerror=function(){clearTimeout(t);bad();};i.src=url+(url.indexOf("?")<0?"?":"&")+"t="+Date.now();}
   var files=document.querySelectorAll("a[data-released]");
   files.forEach(function(a){var f=a.getAttribute("data-file");
-    probe(BASE+"status/"+encodeURIComponent(f)+".gif",function(){a.href=BASE+f;},function(){});});
+    probe(BASE+"status/ide-v0.3.0/"+encodeURIComponent(f)+".gif",function(){a.href=BASE+f;},function(){});});
   probe("https://ide.softwareequality.com/icons/icon-192.png",function(){},function(){
     document.querySelectorAll("a[data-web]").forEach(off);
     var s=document.getElementById("dl-status");
