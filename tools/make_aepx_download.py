@@ -88,7 +88,7 @@ cards = [
           "In Chromium, choose Install from the address bar to give it its own window."],
          note="On FreeBSD, the Linux build may also run under the Linux compatibility layer (linux64). That route is not officially supported."),
     card("dl-apk", "Android phones and tablets (APK)",
-         "For Android 8 or later. The Google Play version is in review; until it is listed, install the APK. Your account and plan carry over to the Play version.",
+         "For Android 8 or later. A Google Play version is on its way; meanwhile install the APK. Your account and plan carry over to the Play version.",
          [file_btn("AEP-X-IDE-Android.apk", "Download APK", True)],
          ["Open the downloaded file.", "If asked, allow your browser to install unknown apps.",
           "Tap Install, then sign in with your account."]),
