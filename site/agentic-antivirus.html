@@ -78,6 +78,11 @@
       <p>Ads never appear on approval, containment, threat warning, quarantine, sign-in, payment or audit screens.</p>
       <h3>Downloads</h3>
       <ul><li>Windows agent and console (x64, Arm64) &mdash; coming soon</li><li>macOS agent and console (Apple silicon, Intel) &mdash; coming soon</li><li>Linux agent and console (x64, Arm64) &mdash; coming soon</li><li>Android app on Google Play &mdash; coming soon</li><li>iPhone and iPad app on the App Store &mdash; coming soon</li></ul>
+      <h3>Run the server with Docker</h3>
+      <p>The console and control plane are published as container images for Intel/AMD and Arm (including Oracle Cloud Ampere) servers. Early access: images track the latest tested build.</p>
+      <pre><code>docker pull ghcr.io/aliabdalla-maker/agentic-antivirus-control-plane:edge
+docker pull ghcr.io/aliabdalla-maker/agentic-antivirus-web:edge</code></pre>
+      <p>The Compose file, database setup and install steps are in the <a href="https://github.com/aliabdalla-maker/aepx-core/tree/master/products/agentic-antivirus/deploy">deploy folder on GitHub</a>.</p>
       <h3>Your data</h3>
       <p>By default devices send security telemetry and file fingerprints, not file contents. Read the full <a href="/agentic-antivirus-privacy">privacy policy</a>.</p>
     </div>
